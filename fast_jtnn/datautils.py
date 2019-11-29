@@ -5,7 +5,7 @@ import numpy as np
 from jtnn_enc import JTNNEncoder
 from mpn import MPN
 from jtmpn import JTMPN
-import cPickle as pickle
+import pickle
 import os, random
 
 class PairTreeFolder(object):

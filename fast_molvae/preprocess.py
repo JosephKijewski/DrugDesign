@@ -4,8 +4,11 @@ from multiprocessing import Pool
 
 import math, random, sys
 from optparse import OptionParser
-import cPickle as pickle
+import pickle
 
+import sys
+sys.path.insert(1, 'C:/ComputerScience/icml18-jtnn')
+sys.path.insert(1, 'C:/ComputerScience/icml18-jtnn/fast_jtnn')
 from fast_jtnn import *
 import rdkit
 
@@ -45,7 +48,7 @@ if __name__ == "__main__":
 
     le = (len(all_data) + num_splits - 1) / num_splits
 
-    for split_id in xrange(num_splits):
+    for split_id in rrange(num_splits):
         st = split_id * le
         sub_data = all_data[st : st + le]
 
